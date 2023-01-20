@@ -1,0 +1,188 @@
+/* line 1, ../Project-baloons/sass/style.sass */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 6, ../Project-baloons/sass/style.sass */
+html {
+  font-size: 10px;
+}
+
+/* line 9, ../Project-baloons/sass/style.sass */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  padding: 5rem;
+  background-color: white;
+}
+
+/* line 18, ../Project-baloons/sass/style.sass */
+.container {
+  background-color: #f7f7f7;
+}
+
+/* line 21, ../Project-baloons/sass/style.sass */
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-backgraund.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+/* line 26, ../Project-baloons/sass/style.sass */
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  width: 5.6rem;
+  height: 7rem;
+}
+
+/* line 32, ../Project-baloons/sass/style.sass */
+.header__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* line 40, ../Project-baloons/sass/style.sass */
+.title-first {
+  color: white;
+  font-family: "Roboto";
+}
+
+/* line 43, ../Project-baloons/sass/style.sass */
+.title-first__main {
+  display: block;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: .1rem;
+  margin-bottom: .1rem;
+  animation-name: leftToright;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+/* line 55, ../Project-baloons/sass/style.sass */
+.title-first__secondary {
+  display: block;
+  font-weight: 200;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 5px;
+  animation-name: rightToleft;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+  margin-bottom: 65px;
+}
+
+/* line 68, ../Project-baloons/sass/style.sass */
+.btn {
+  position: relative;
+}
+
+/* line 70, ../Project-baloons/sass/style.sass */
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  color: #777777;
+  background-color: white;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all .3s;
+  font-size: 20px;
+}
+
+/* line 80, ../Project-baloons/sass/style.sass */
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* line 83, ../Project-baloons/sass/style.sass */
+.btn:hover::after {
+  opacity: 0;
+  transition: all .4s;
+  transform: scaleX(1.5) scaleY(1.7);
+}
+
+/* line 87, ../Project-baloons/sass/style.sass */
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* line 90, ../Project-baloons/sass/style.sass */
+.btn::after {
+  content: "";
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+/* line 101, ../Project-baloons/sass/style.sass */
+.btn_animated {
+  animation: BtnToUp 0.5s ease-out .7s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes leftToright {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rightToleft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
